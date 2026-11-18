@@ -1,0 +1,12 @@
+conda activate InterMS
+# PDBBind 2020
+PYTHONPATH=. CUDA_VISIBLE_DEVICES=0 python scripts/pipeline.py --config_file configs/pdbbind2020_config.ini
+
+# BioSNAP
+PYTHONPATH=. CUDA_VISIBLE_DEVICES=1 python scripts/pipeline.py --config_file configs/biosnap_config.ini
+
+# Function
+PYTHONPATH=. CUDA_VISIBLE_DEVICES=2 python scripts/pipeline.py --config_file configs/function_config.ini
+
+# BindingDB
+PYTHONPATH=. CUDA_VISIBLE_DEVICES=3 python scripts/pipeline.py --config_file configs/bindingdb_config.ini
